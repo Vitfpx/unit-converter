@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modular Unit Converter</title>
+    <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="main-container">
+      <article class="article-container">
+        <form method="GET" class="form-converter">
+          <h1 class="converter__title">Unit Converter</h1>
+          <div class="converter converter__options">
+            <label
+              class="converter-label converter__options-label"
+              for="conversion-select"
+              >Select the Conversion:</label
+            >
+            <select
+              id="conversion-select"
+              class="converter-input converter__options-select"
+            >
+              <option class="option" value="distance">Distance (KM - Miles)</option>
+              <option class="option" value="temperature">Temperature (ºC - ºF)</option>
+              <option class="option" value="weight">Weight (Kg - Lbs)</option>
+              <option class="option" value="height">Height (In - Cm)</option>
+            </select>
+          </div>
+          <div class="converter converter__value">
+            <label
+              class="converter-label converter__value-label"
+              for="conversion-value"
+              >Value:
+            </label>
+            <input
+              type="number"
+              id="conversion-value"
+              class="converter-input converter__value-input"
+              placeholder="Enter a value"
+            />
+          </div>
+          <div class="converter converter__results">
+            <label
+              for="conversion-results"
+              class="converter-label converter__results-label"
+              >Results:</label
+            >
+            <input
+              type="text"
+              id="conversion-results"
+              class="converter-input converter__results-input"
+              placeholder="Results"
+              readonly
+            />
+          </div>
+          <button type="button" class="convert-button">Convert</button>
+        </form>
+      </article>
+    </main>
+  </body>
+</html>
